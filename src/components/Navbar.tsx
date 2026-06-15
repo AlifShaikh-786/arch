@@ -54,14 +54,14 @@ export default function Navbar() {
         <nav className="hidden lg:flex items-center gap-10 text-left mr-28 ">
           <Link
             href="/"
-            className="text-[var(--link-size)] font-[var(--font-weight-body)] text-black hover:text-[#8a1529] transition-colors"
+            className="text-[var(--link-size)] font-[var(--font-weight-body)] text-[var(--text-1)] hover:text-[#8a1529] transition-colors"
           >
             Home
           </Link>
 
           {/* Dropdown 1 */}
           <div className="relative group cursor-pointer py-2">
-            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-black hover:text-[#8a1529] inline-flex items-center gap-1">
+            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-[var(--text-1)] hover:text-[#8a1529] inline-flex items-center gap-1">
               About Us
               <svg
                 className="w-3 h-3 transform group-hover:rotate-180 transition-transform"
@@ -95,7 +95,7 @@ export default function Navbar() {
 
           {/* Dropdown 2 */}
           <div className="relative group cursor-pointer py-2">
-            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-black inline-flex items-center gap-1 hover:text-[#8a1529] transition-colors">
+            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-[var(--text-1)] inline-flex items-center gap-1 hover:text-[#8a1529] transition-colors">
               Academics
               <svg
                 className="w-3 h-3"
@@ -115,7 +115,7 @@ export default function Navbar() {
 
           {/* Dropdown 3 */}
           <div className="relative group cursor-pointer py-2">
-            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-black inline-flex items-center gap-1 hover:text-[#8a1529] transition-colors">
+            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-[var(--text-1)] inline-flex items-center gap-1 hover:text-[#8a1529] transition-colors">
               Placement
               <svg
                 className="w-3 h-3"
@@ -135,7 +135,7 @@ export default function Navbar() {
 
           {/* Dropdown 4 */}
           <div className="relative group cursor-pointer py-2">
-            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-black inline-flex items-center gap-1 hover:text-[#8a1529] transition-colors">
+            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-[var(--text-1)] inline-flex items-center gap-1 hover:text-[#8a1529] transition-colors">
               Faculty
               <svg
                 className="w-3 h-3"
@@ -155,7 +155,7 @@ export default function Navbar() {
 
           {/* Dropdown 4 */}
           <div className="relative group cursor-pointer py-2">
-            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-black inline-flex items-center gap-1 hover:text-[#8a1529] transition-colors">
+            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-[var(--text-1)] inline-flex items-center gap-1 hover:text-[#8a1529] transition-colors">
               Events & News
               <svg
                 className="w-3 h-3"
@@ -175,7 +175,7 @@ export default function Navbar() {
 
           <Link
             href="/contact"
-            className="text-[var(--link-size)] font-[var(--font-weight-body)] text-black hover:text-[#8a1529] transition-colors"
+            className="text-[var(--link-size)] font-[var(--font-weight-body)] text-[var(--text-1)] hover:text-[#8a1529] transition-colors"
           >
             Contact
           </Link>
