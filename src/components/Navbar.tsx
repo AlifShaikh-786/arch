@@ -8,7 +8,7 @@ export default function Navbar() {
   return (
     <header className="w-full relative z-50 bg-white select-none">
       {/* --- TOP BAR --- */}
-      <div className="bg-[#8a1529] text-white">
+      <div className="bg-[linear-gradient(to_right,#2d2f7f,#681e5d,#A43154,#DB2A31)] text-white">
         <div className="max-w-[1440px] mx-auto px-4 lg:px-8 h-12 flex items-center justify-between">
           {/* Welcome Text / Icon */}
           <div className="flex items-center gap-2 pl-[180px] lg:pl-[220px] xl:pl-[240px] md:block hidden">
@@ -17,7 +17,7 @@ export default function Navbar() {
               <svg className="w-4 h-4 fill-white" viewBox="0 0 24 24">
                 <path d="M12 3L1 9l11 6 9-4.91V17h2V9L12 3zM5.18 13.04l6.82 3.72 6.82-3.72C17.7 15.17 15.03 16 12 16s-5.7-.83-6.82-2.96z" />
               </svg>
-              Welcome To Dr. D Y Patil School of Architecture
+              Welcome To Dr. D Y Patil School of Architecture Varale, Talegaon
             </span>
           </div>
 
@@ -25,7 +25,7 @@ export default function Navbar() {
           <div className="flex items-center gap-4 ml-auto sm:gap-6">
             {[
               "DTE CODE: 6245",
-              "Accredited By NAAC WITH  'A'  Grade",
+              "Accredited by NAAC with  'A'  Grade",
 
               "MH56",
             ].map((item) => (
@@ -51,17 +51,16 @@ export default function Navbar() {
         </div>
 
         {/* Desktop Menu Links */}
-        <nav className="hidden lg:flex items-center gap-10 text-left mr-28 ">
-          <Link
-            href="/"
-            className="text-[var(--link-size)] font-[var(--font-weight-body)] text-black hover:text-[#8a1529] transition-colors"
+        <nav className="hidden lg:flex items-center gap-10 text-left mr-10 ">
+          <span
+            className="text-[var(--link-size)] font-[var(--font-weight-body)] text-black hover:text-[#3E4095] transition-colors"
           >
             Home
-          </Link>
+          </span>
 
           {/* Dropdown 1 */}
           <div className="relative group cursor-pointer py-2">
-            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-black hover:text-[#8a1529] inline-flex items-center gap-1">
+            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-black hover:text-[#3E4095] inline-flex items-center gap-1">
               About Us
               <svg
                 className="w-3 h-3 transform group-hover:rotate-180 transition-transform"
@@ -82,20 +81,44 @@ export default function Navbar() {
                 href="/about"
                 className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
               >
-                Our History
+                About DYPSOA
               </Link>
               <Link
                 href="/vision"
                 className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
               >
-                Vision & Mission
+                Our Inspiration
+              </Link>
+              <Link
+                href="/about"
+                className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
+              >
+                Vission & Mision
+              </Link>
+              <Link
+                href="/vision"
+                className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
+              >
+                Director's Desk
+              </Link>
+              <Link
+                href="/about"
+                className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
+              >
+                Key Features
+              </Link>
+              <Link
+                href="/vision"
+                className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
+              >
+                Committes
               </Link>
             </div>
           </div>
 
           {/* Dropdown 2 */}
           <div className="relative group cursor-pointer py-2">
-            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-black inline-flex items-center gap-1 hover:text-[#8a1529] transition-colors">
+            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-black inline-flex items-center gap-1 hover:text-[#3E4095] transition-colors">
               Academics
               <svg
                 className="w-3 h-3"
@@ -111,11 +134,25 @@ export default function Navbar() {
                 />
               </svg>
             </span>
+            <div className="absolute top-full left-0 hidden group-hover:block bg-white shadow-xl rounded-md border border-[var(--card-border)] py-2 min-w-[200px]">
+              <Link
+                href="/about"
+                className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
+              >
+                B.Arch
+              </Link>
+              <Link
+                href="/vision"
+                className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
+              >
+                M.Arch
+              </Link>
+            </div>
           </div>
 
           {/* Dropdown 3 */}
           <div className="relative group cursor-pointer py-2">
-            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-black inline-flex items-center gap-1 hover:text-[#8a1529] transition-colors">
+            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-black inline-flex items-center gap-1 hover:text-[#3E4095] transition-colors">
               Placement
               <svg
                 className="w-3 h-3"
@@ -131,11 +168,55 @@ export default function Navbar() {
                 />
               </svg>
             </span>
+            <div className="absolute top-full left-0 hidden group-hover:block bg-white shadow-xl rounded-md border border-[var(--card-border)] py-2 min-w-[200px]">
+              <Link
+                href="/about"
+                className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
+              >
+                About Placement
+              </Link>
+              <Link
+                href="/vision"
+                className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
+              >
+                Placement Committess
+              </Link>
+              <Link
+                href="/vision"
+                className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
+              >
+                Placement Activities
+              </Link>
+              <Link
+                href="/vision"
+                className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
+              >
+                Placement Updates
+              </Link>
+              <Link
+                href="/vision"
+                className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
+              >
+                Our Recruiters
+              </Link>
+              <Link
+                href="/vision"
+                className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
+              >
+                Placement Gallery
+              </Link>
+              <Link
+                href="/vision"
+                className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
+              >
+                Career Support
+              </Link>
+            </div>
           </div>
 
           {/* Dropdown 4 */}
           <div className="relative group cursor-pointer py-2">
-            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-black inline-flex items-center gap-1 hover:text-[#8a1529] transition-colors">
+            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-black inline-flex items-center gap-1 hover:text-[#3E4095] transition-colors">
               Faculty
               <svg
                 className="w-3 h-3"
@@ -151,11 +232,32 @@ export default function Navbar() {
                 />
               </svg>
             </span>
+
+            <div className="absolute top-full left-0 hidden group-hover:block bg-white shadow-xl rounded-md border border-[var(--card-border)] py-2 min-w-[200px]">
+              <Link
+                href="/about"
+                className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
+              >
+                Director's Desk
+              </Link>
+              <Link
+                href="/vision"
+                className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
+              >
+                Principal's Desk
+              </Link>
+              <Link
+                href="/vision"
+                className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
+              >
+                Other Faculties
+              </Link>
+            </div>
           </div>
 
           {/* Dropdown 4 */}
           <div className="relative group cursor-pointer py-2">
-            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-black inline-flex items-center gap-1 hover:text-[#8a1529] transition-colors">
+            <span className="text-[var(--link-size)] font-[var(--font-weight-body)] text-black inline-flex items-center gap-1 hover:text-[#3E4095] transition-colors">
               Events & News
               <svg
                 className="w-3 h-3"
@@ -171,14 +273,45 @@ export default function Navbar() {
                 />
               </svg>
             </span>
+            <div className="absolute top-full left-0 hidden group-hover:block bg-white shadow-xl rounded-md border border-[var(--card-border)] py-2 min-w-[200px]">
+              <Link
+                href="/about"
+                className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
+              >
+                Upcoming Event's
+              </Link>
+              <Link
+                href="/vision"
+                className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
+              >
+                Workshop's
+              </Link>
+              <Link
+                href="/about"
+                className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
+              >
+                Guest Lecture's
+              </Link>
+              <Link
+                href="/vision"
+                className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
+              >
+                Conference
+              </Link>
+              <Link
+                href="/vision"
+                className="block px-4 py-2 text-[var(--small-size)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
+              >
+                News & Updates
+              </Link>
+            </div>
           </div>
 
-          <Link
-            href="/contact"
-            className="text-[var(--link-size)] font-[var(--font-weight-body)] text-black hover:text-[#8a1529] transition-colors"
+          <span
+            className="text-[var(--link-size)] font-[var(--font-weight-body)] text-black hover:text-[#3E4095] transition-colors"
           >
             Contact
-          </Link>
+          </span>
         </nav>
 
         {/* Right Action Utilities (Search, Drawer, CTA Button) */}
@@ -186,7 +319,7 @@ export default function Navbar() {
           {/* Apply Now CTA Button */}
           <Link
             href="/apply"
-            className="btn-md bg-[#8a1529] hover:bg-[#6b0f20] text-white px-6 py-3 rounded-[var(--r-lg)] flex items-center gap-2 transition-colors shadow-sm ml-2 shrink-0 text-center"
+            className="btn-md bg-[#3E4095] hover:bg-[#3E4095] text-white px-6 py-3 rounded-[var(--r-lg)] flex items-center gap-2 transition-colors shadow-sm ml-2 shrink-0 text-center"
             style={{ fontSize: "var(--btn-md-size)" }}
           >
             Apply Now
