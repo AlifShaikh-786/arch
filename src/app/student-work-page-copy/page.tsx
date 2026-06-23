@@ -142,9 +142,9 @@ export default function StudentWorkGrid() {
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-102"
                 />
                 {/* Floating Badge */}
-                <span className="absolute top-4 left-4  text-white  uppercase small1 bg-[var(--primary)] text-whiteDoc px-2.5 py-1 rounded-[var(--s-btn)] shadow-sm">
+                {/* <span className="absolute top-4 left-4  text-white  uppercase small1 bg-[var(--primary)] text-whiteDoc px-2.5 py-1 rounded-[var(--s-btn)] shadow-sm">
                   {project.type}
-                </span>
+                </span> */}
               </div>
 
               {/* Structured Text Metadata Details */}

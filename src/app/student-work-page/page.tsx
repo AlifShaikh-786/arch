@@ -111,6 +111,7 @@ export default function StudentWork() {
                   src={project.imageUrl}
                   alt={project.projectName}
                   className="w-full h-full object-cover"
+                  
                 />
               </div>
 
