@@ -6,11 +6,13 @@ import BArchProgrammePage from "../sections/Management/b-Arc";
 import MBAProgrammePage from "../sections/Management/abc";
 import StudentWork from "../sections/Management/StudentWork";
 import StudentWorkVariation from "../sections/Management/b-Arc";
+import StudentWorkGrid from "../sections/Management/b-Arc";
 
 export default function Home() {
   return (
     <>
       <main>
+        {/* <StudentWorkGrid /> */}
         {/* Active Section Preview or Layout Components Go Here */}
 
         {/* Navigation Link Directory */}
