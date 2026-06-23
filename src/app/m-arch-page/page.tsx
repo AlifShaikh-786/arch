@@ -640,7 +640,7 @@ export default function Page() {
 
                   {/* Timeline Junction Node */}
                   <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-(--r-lg) bg-[var(--secondary-bg)] border-2 border-[var(--border-color)] transition-all duration-300 group-hover:border-[var(--primary)] group-hover:bg-[var(--primary)] flex items-center justify-center">
-                    <div className="w-1.5 h-1.5 rounded-(--r-lg) bg-transparent transition-colors group-hover:bg-white" />
+                    <div className="w-1.5 h-1.5 rounded-(--r-lg) bg-[var(--primary)] transition-colors group-hover:bg-white" />
                   </div>
 
                   {/* Main Step Content Card */}

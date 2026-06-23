@@ -90,6 +90,18 @@ export default function Navbar() {
               Home
             </span>
           </Link>
+          {/* <Link href="/student-work-page">
+            <span
+              className="hover:text-black transition-colors text-white"
+              style={{
+                fontSize: "var(--body-size)",
+                lineHeight: "var(--body-line-height)",
+                fontWeight: "var(--font-weight-body)",
+              }}
+            >
+              Student Work
+            </span>
+          </Link> */}
 
           {/* Dropdown 1 */}
           <div className="relative group cursor-pointer py-2">
@@ -288,7 +300,7 @@ export default function Navbar() {
           </div>
 
           {/* Dropdown 5 */}
-          <div className="relative group cursor-pointer py-2">
+          {/* <div className="relative group cursor-pointer py-2">
             <span className="text-[var(--link-size)]  text-white font-[var(--font-weight-body)] inline-flex items-center gap-1 hover:text-black transition-colors">
               Events & News
               <svg
@@ -337,7 +349,20 @@ export default function Navbar() {
                 News & Updates
               </Link>
             </div>
-          </div>
+          </div> */}
+
+          <Link href="/student-work-page">
+            <span
+              className="hover:text-black transition-colors text-white"
+              style={{
+                fontSize: "var(--body-size)",
+                lineHeight: "var(--body-line-height)",
+                fontWeight: "var(--font-weight-body)",
+              }}
+            >
+              Student Work
+            </span>
+          </Link>
 
           <Link href="/">
             <span

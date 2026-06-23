@@ -232,14 +232,16 @@ export default function SidebarNavigation({ items }: SidebarNavigationProps) {
         className={`
           fixed lg:sticky
           left-0
-          top-0 lg:top-8
+          top-0 
           mb-10
-          h-screen lg:h-auto
+          mt-20
+          h-screen lg:h-auto 
           w-[280px] lg:w-[270px] xl:w-[340px]
           shrink-0
           bg-[var(--secondary-bg)]
           border border-[var(--card-border)]
-          p-6
+          px-6
+          py-4
           z-[1000]
           transition-transform duration-300 ease-in-out
 
@@ -261,7 +263,7 @@ export default function SidebarNavigation({ items }: SidebarNavigationProps) {
         </div>
 
         {/* Desktop spacing */}
-        <div className="hidden lg:block mt-14" />
+        <div className="hidden lg:block mt-4" />
 
         <nav className="flex flex-col gap-1">
           {items.map((item) => {

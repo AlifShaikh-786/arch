@@ -531,12 +531,12 @@ export default function page() {
                   </div>
 
                   {/* Central Structural Timeline Junction Node */}
-                  <div className="absolute -left-[9px] top-1.5 w-4 h-4 rounded-(--r-lg) bg-[var(--secondary-bg)] border-2 border-[var(--border-color)] transition-all duration-300 group-hover:border-[var(--primary)] group-hover:bg-[var(--primary)] flex items-center justify-center">
-                    <div className="w-1.5 h-1.5 rounded-(--r-lg) bg-transparent transition-colors group-hover:bg-white" />
+                  <div className="  absolute -left-[9px] top-1.5 w-4 h-4 rounded-(--r-lg) bg-[var(--secondary-bg)] border-2 border-[var(--border-color)] transition-all duration-300 group-hover:border-[var(--primary)] group-hover:bg-[var(--primary)] flex items-center justify-center">
+                    <div className="w-1.5 h-1.5 rounded-(--r-lg) bg-[var(--primary)] transition-colors group-hover:bg-white" />
                   </div>
 
                   {/* Main Information Step Content Card Grid */}
-                  <div className="bg-[var(--secondary-bg)] border border-[var(--card-border)] p-6 rounded-[var(--r-btn)] shadow-sm transition-all duration-300 group-hover:shadow-md group-hover:border-[var(--primary)]/20 z-0">
+                  <div className="bg-[var(--secondary-bg)] w-full  border border-[var(--card-border)] p-6 rounded-[var(--r-btn)] shadow-sm transition-all duration-300 group-hover:shadow-md group-hover:border-[var(--primary)]/20 z-0">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-3">
                       <h5 className="text-[var(--text-1)] ">{step.title}</h5>
                       {/* Mobile-only Step Counter Badge */}

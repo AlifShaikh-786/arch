@@ -12,12 +12,12 @@ export default function FAQSectionItem({
   question,
   answer,
 }: FAQSectionItemProps) {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); 
 
-  return (
+  return ( 
     <div className="border-b border-[var(--border-color)]">
       <button
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => setIsOpen(!isOpen)} 
         className="w-full flex items-center justify-between py-6 text-left cursor-pointer focus:outline-none"
       >
         <p className="text-[var(--text-1)] w-80 sm:w-full">{question}</p>
