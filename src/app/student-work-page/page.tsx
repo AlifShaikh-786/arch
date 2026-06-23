@@ -19,7 +19,7 @@ const projectsData = [
     projectName: "Integrating agriculture into urban space",
     studentName: "Diya Kulkarni",
     guideName: "Prof. Shubhada Chapekar",
-    imageUrl: "/Student-work/image.png",
+    imageUrl: "Student-work/image.png",
     youtubeUrl: "https://www.youtube.com/watch?v=ZhwZ4vtFfkk",
     portfolioUrl: "https://www.slideshare.net/secret/cPbexo6q88D3zX",
   },
@@ -29,7 +29,7 @@ const projectsData = [
     projectName: "Sustainable High-Rise Ecosystems",
     studentName: "Arjun Mehta",
     guideName: "Prof. Rajesh Khanna",
-    imageUrl: "/Student-work/image1.png",
+    imageUrl: "Student-work/image1.png",
     youtubeUrl: "https://www.youtube.com/watch?v=ZhwZ4vtFfkk",
     portfolioUrl: "https://www.slideshare.net/secret/cPbexo6q88D3zX",
   },
@@ -39,7 +39,7 @@ const projectsData = [
     projectName: "Revitalizing Waterfront Communities",
     studentName: "Isha Sharma",
     guideName: "Prof. Shubhada Chapekar",
-    imageUrl: "/Student-work/image2.png",
+    imageUrl: "Student-work/image2.png",
     youtubeUrl: "https://www.youtube.com/watch?v=ZhwZ4vtFfkk",
     portfolioUrl: "https://www.slideshare.net/secret/cPbexo6q88D3zX",
   },
@@ -109,7 +109,7 @@ export default function StudentWork() {
               <div className="w-full sm:w-1/2 max-h-[330px]  relative bg-[var(--secondary-bg)]">
                 <img
                   src={project.imageUrl}
-                  alt={project.projectName} 
+                  alt={project.projectName}
                   className="w-full h-full object-cover"
                 />
               </div>
