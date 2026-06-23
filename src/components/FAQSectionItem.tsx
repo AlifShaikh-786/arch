@@ -20,7 +20,7 @@ export default function FAQSectionItem({
         onClick={() => setIsOpen(!isOpen)}
         className="w-full flex items-center justify-between py-6 text-left cursor-pointer focus:outline-none"
       >
-        <p className="text-[var(--text-1)]">{question}</p>
+        <p className="text-[var(--text-1)] w-80 sm:w-full">{question}</p>
 
         <span
           className={`w-8 h-8 rounded-(--r-lg) border border-[var(--text-1)] flex items-center justify-center transition-all duration-300 text-[var(--text-1)] ${
