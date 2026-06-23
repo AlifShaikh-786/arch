@@ -1,48 +1,38 @@
-import React from "react";
 import Link from "next/link";
 
 export default function Footer() {
   return (
     <footer className="relative w-full  bg-[var(--secondary-bg)] overflow-hidden">
-      <div className="relative z-10 max-w-[1440px] mx-auto px-6 pt-16 pb-8 md:px-12 lg:px-16">
+      <div className="relative z-10 max-w-[1440px] mx-auto px-6 pt-16 pb-8  md:px-12 lg:px-16">
         {/* Main Columns Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-20 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-20">
           {/* Column 1: Brand Profile */}
-          <div className="flex flex-col space-y-6">
-            <div className="flex items-center ">
-              {/* Red Line-Art Shield & Lion Crest */}
-              <Link href="/">
-                <img
-                  src="/Logo/logo.png"
-                  alt="logo"
-                  className="w-40 h-40  items-center justify-center"
-                />
-              </Link>
-            </div>
+          <div className="">
+            {/* Red Line-Art Shield & Lion Crest */}
+            <Link href="/">
+              <img
+                src="/Logo/logo.png"
+                alt="logo"
+                className="w-52 h-60 items-center justify-center"
+              />
+            </Link>
           </div>
 
           {/* Column 2: */}
-          <div className="flex flex-col space-y-4">
-            <p
-              className=" text-gray-400   max-w-sm"
-              style={{
-                fontSize: "var(--body-size)",
-                lineHeight: "var(--body-line-height)",
-                fontWeight: "var(--font-weight-body)",
-              }}
-            >
-              Dr. D. Y. Patil School of Architecture, Varale, Pune is a premier
-              architecture institute offering quality education, innovative
-              design learning, and professional development for aspiring
-              architects.
+          <div className="flex flex-col space-y-6">
+            <p className=" text-[var(--text-1)]    w-xs ">
+              Dr. D Y Patil School of Architecture Affiliated to Savitribai
+              Phule Pune University (SPPU) DTE CODE - 6245 Approved by Council
+              of Architecture (COA), New Delhi MH56 Accredited by NAAC with ‘A’
+              Grade
             </p>
 
             {/* Social Links */}
-            <div className="flex items-center gap-5 pt-2">
+            <div className="flex items-center gap-10  mb-4">
               {/* X / Twitter */}
               <Link
                 href="https://x.com"
-                className=" text-gray-400   hover:text-white transition-colors"
+                className=" text-[var(--text-1)]   hover:text-[var(--text-2)] transition-colors"
                 aria-label="X"
               >
                 <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -52,7 +42,7 @@ export default function Footer() {
               {/* Facebook */}
               <Link
                 href="https://facebook.com"
-                className=" text-gray-400   hover:text-white transition-colors"
+                className=" text-[var(--text-1)]   hover:text-[var(--text-2)] transition-colors"
                 aria-label="Facebook"
               >
                 <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -62,7 +52,7 @@ export default function Footer() {
               {/* Instagram */}
               <Link
                 href="https://instagram.com"
-                className=" text-gray-400   hover:text-white transition-colors"
+                className=" text-[var(--text-1)]   hover:text-[var(--text-2)] transition-colors"
                 aria-label="Instagram"
               >
                 <svg
@@ -77,7 +67,7 @@ export default function Footer() {
               {/* YouTube */}
               <Link
                 href="https://youtube.com"
-                className=" text-gray-400   hover:text-white transition-colors"
+                className=" text-[var(--text-1)]   hover:text-[var(--text-2)] transition-colors"
                 aria-label="YouTube"
               >
                 <svg className="w-5 h-5 fill-current" viewBox="0 0 24 24">
@@ -88,9 +78,9 @@ export default function Footer() {
           </div>
 
           {/* Column 3:  */}
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-4 ml-18">
             <h5
-              className="  font-bold text-black"
+              className="    text-[var(--text-1)] "
               style={{
                 fontSize: "var(--h5-size)",
                 lineHeight: "var(--h5-line-height)",
@@ -100,17 +90,10 @@ export default function Footer() {
             </h5>
 
             <div className="space-y-3">
-              <span className="block text-xl font-bold text-gray-400  ">
+              <span className="block  text-[var(--text-1)]  ">
                 800 388 80 90
               </span>
-              <p
-                className=" text-gray-400   text-gray-400   max-w-[240px]"
-                style={{
-                  fontSize: "var(--small-size)",
-                  lineHeight: "var(--small-line-height)",
-                  fontWeight: "var(--font-weight-body)",
-                }}
-              >
+              <p className=" text-[var(--text-1)]  small1   max-w-[240px]">
                 Varale, Near Talegaon Railway Station, Talegaon Dabhade, Pune –
                 410507, Maharashtra, India.
               </p>
@@ -119,7 +102,7 @@ export default function Footer() {
             <div className="pt-2">
               <Link
                 href="/directions"
-                className="btn-sm inline-block border border-gray-700 text-black hover:bg-white/5 px-4 py-2 transition-colors rounded-[4px]"
+                className="btn-sm inline-block border border-black text-[var(--text-1)]   px-4 py-2 rounded-(--s-btn)"
                 style={{ fontSize: "var(--btn-sm-size)" }}
               >
                 Get directions
@@ -128,9 +111,9 @@ export default function Footer() {
           </div>
 
           {/* Column 4: Quick Links */}
-          <div className="flex flex-col space-y-4">
+          <div className="flex flex-col space-y-4 ml-14">
             <h5
-              className="  font-bold text-black"
+              className="    text-[var(--text-1)] "
               style={{
                 fontSize: "var(--h5-size)",
                 lineHeight: "var(--h5-line-height)",
@@ -155,7 +138,7 @@ export default function Footer() {
                 >
                   <Link
                     href={`/${link.toLowerCase().replace(/\s+/g, "-")}`}
-                    className=" text-gray-400   hover:text-white transition-colors block"
+                    className=" text-[var(--text-1)]   hover:text-[var(--text-2)] transition-colors block"
                   >
                     {link}
                   </Link>
@@ -166,9 +149,9 @@ export default function Footer() {
         </div>
 
         {/* --- BOTTOM RIGHTS BAR --- */}
-        <div className="border-t border-white/10 pt-8 mt-4 text-center">
+        <div className="border-t border-black pt-4 mt-2 text-center">
           <small
-            className="text-gray-500 "
+            className="text-(--text-2) "
             style={{ fontSize: "var(--small-size)" }}
           >
             © 2026 Dr. D. Y. Patil School of Architecture. All Rights Reserved

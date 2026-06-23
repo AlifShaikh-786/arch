@@ -2,13 +2,16 @@
 
 /* DESKTOP — 1024px and above (covers 1024 / 1440 / 1920) */
 :root {
-  --primary: #155dfc;
-  --primary-hover: #1d4ed8;
+  --primary: #403f96;
+  --primary-hover: #2f2e72;
+
   --primary-bg: #ffffff;
   --secondary-bg: #f8fafc;
   --text-1: #000000;
   --text-2: #475569;
   --card-border: #f2f2f2;
+  --border-color: #f2f2f2;
+  --s-btn: 8px;
   --r-btn: 12px;
   --r-lg-btn: 20px;
   --r-lg: 50px;
@@ -63,6 +66,31 @@
   /* Fallback color variables */
   --background: #ffffff;
   --foreground: #000000;
+}
+
+/* TABLET — 1024px to 1250px */
+@media (max-width: 1250px) {
+  :root {
+    /* Body */
+    --body-size: 12px;
+    --body-line-height: 26px;
+
+    --small-size: 10px;
+    --small-line-height: 20px;
+
+    /* Links */
+    --link-size: 10px;
+    --link-line-height: 21px;
+
+    /* Buttons — 3 named sizes */
+    --btn-sm-size: 10px;
+    --btn-md-size: 10px;
+    --btn-lg-size: 18px;
+
+    /* List items */
+    --li-size: 12px;
+    --li-line-height: 26px;
+  }
 }
 
 /* TABLET — 768px to 1023px */
@@ -134,12 +162,12 @@
   --font-sans: var(--font-family);
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 /* Global Elements Reset — Enforcing Poppins everywhere */
 *,
@@ -213,6 +241,11 @@ a {
   line-height: var(--link-line-height);
   font-weight: var(--font-weight-body);
 }
+/* span {
+  font-size: var(--small-size);
+  line-height: var(--small-line-height);
+  font-weight: var(--font-weight-body);
+} */
 
 /* Button sizes via utility classes */
 .btn-sm {
@@ -230,7 +263,7 @@ a {
   font-weight: var(--font-weight-body);
 }
 
-small {
+.small1 {
   font-size: var(--small-size);
   line-height: var(--small-line-height);
   font-weight: var(--font-weight-body);
