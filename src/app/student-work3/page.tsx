@@ -142,6 +142,7 @@ export default function StudentWorkGrid() {
                   alt={project.projectName}
                   fill
                   priority
+                  sizes=""
                   className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-102"
                 />
                 {/* Floating Badge */}
@@ -159,7 +160,7 @@ export default function StudentWorkGrid() {
 
                   {/* Information Specs */}
                   <div className="space-y-2">
-                    <div className="flex justify-between items-center border-b pb-1.5 border-[var(--border-color)]">
+                    <div className="flex justify-between items-center border-b pb-2 border-[var(--border-color)]">
                       <span className="small1 text-[var(--text-2)]">
                         Student Name
                       </span>
@@ -167,7 +168,7 @@ export default function StudentWorkGrid() {
                         {project.studentName}
                       </span>
                     </div>
-                    <div className="flex justify-between items-center">
+                    <div className="flex justify-between items-center pb-2">
                       <span className="small1 text-[var(--text-2)]">Guide</span>
                       <span className="small1 text-[var(--text-2)]">
                         {project.guideName}
