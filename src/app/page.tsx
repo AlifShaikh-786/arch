@@ -16,7 +16,7 @@ export default function Home() {
         {/* Active Section Preview or Layout Components Go Here */}
 
         {/* Navigation Link Directory */}
-        <div className="flex flex-col gap-10  p-6 bg-[var(--primary-bg)] mt-80 justify-center mx-auto ml-96">
+        <div className="flex flex-col gap-10  p-6 bg-[var(--primary-bg)] mt-60 justify-center mx-auto ml-32">
           <Link href="/b-arch-page">
             <span className="text-[var(--text-1)] hover:text-[var(--primary)] transition-colors">
               B Arch
@@ -37,12 +37,23 @@ export default function Home() {
 
           <Link href="/student-work-page">
             <span className="text-[var(--text-1)] hover:text-[var(--primary)] transition-colors">
-              Student Work
+              Table - 1
+            </span>
+          </Link>
+          <Link href="/table-second">
+            <span className="text-[var(--text-1)] hover:text-[var(--primary)] transition-colors">
+              Table - 2
             </span>
           </Link>
           <Link href="/student-work-page-copy">
             <span className="text-[var(--text-1)] hover:text-[var(--primary)] transition-colors">
-              Student Work 2
+              Student Work
+            </span>
+          </Link>
+
+          <Link href="/student-work3">
+            <span className="text-[var(--text-1)] hover:text-[var(--primary)] transition-colors">
+              Student Work - 2
             </span>
           </Link>
         </div>

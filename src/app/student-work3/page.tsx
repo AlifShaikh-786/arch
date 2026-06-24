@@ -136,7 +136,7 @@ export default function StudentWorkGrid() {
               className="flex flex-col transition-all group shadow-sm bg-[var(--primary-bg)] border border-[var(--card-border)] rounded-[var(--r-btn)] overflow-hidden"
             >
               {/* Visual Header / Thumbnail Box */}
-              <div className="relative aspect-[4/3] w-full overflow-hidden bg-[var(--secondary-bg)]">
+              <div className="relative aspect-[2/1]  w-full overflow-hidden bg-[var(--secondary-bg)]">
                 <Image
                   src={project.imageUrl}
                   alt={project.projectName}
@@ -151,14 +151,14 @@ export default function StudentWorkGrid() {
               </div>
 
               {/* Structured Text Metadata Details */}
-              <div className="p-6 flex flex-col flex-grow justify-between">
+              <div className="px-6 py-2 flex flex-col flex-grow justify-between">
                 <div>
                   <h5 className="mb-4  group-hover:text-[var(--primary)] transition-colors line-clamp-2 text-[var(--text-1)]">
                     {project.projectName}
                   </h5>
 
                   {/* Information Specs */}
-                  <div className="space-y-2 mb-6">
+                  <div className="space-y-2">
                     <div className="flex justify-between items-center border-b pb-1.5 border-[var(--border-color)]">
                       <span className="small1 text-[var(--text-2)]">
                         Student Name
@@ -177,14 +177,14 @@ export default function StudentWorkGrid() {
                 </div>
 
                 {/* Action Button Links */}
-                <div className="grid grid-cols-2 gap-3 pt-4 border-t border-[var(--border-color)]">
+                <div className="grid grid-cols-2 gap-3 pt-2 border-t border-[var(--border-color)]">
                   <a
                     href={project.youtubeUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-sm uppercase flex gap-2 items-center justify-center text-center transition-colors no-underline p-2.5 rounded-[var(--s-btn)] bg-[var(--secondary-bg)] text-[var(--text-1)] hover:bg-[var(--border-color)]"
+                    className="btn-sm  flex gap-2 items-center justify-center text-center transition-colors no-underline py-2 px-1 rounded-[var(--s-btn)] bg-[var(--secondary-bg)] text-[var(--text-1)] hover:bg-[var(--border-color)]"
                   >
-                    Youtube link
+                    Youtube Link
                     <svg
                       className="w-4 h-4 text-[var(--text-1)]"
                       fill="currentColor"
@@ -197,9 +197,9 @@ export default function StudentWorkGrid() {
                     href={project.portfolioUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="btn-sm flex gap-2 items-center justify-center text-center  transition-all no-underline p-2.5 rounded-[var(--s-btn)] bg-[var(--primary)] text-white hover:bg-[var(--primary-hover)]"
+                    className="btn-sm  flex gap-2 items-center justify-center text-center  transition-all no-underline p-2 rounded-[var(--s-btn)] bg-[var(--primary)] text-white hover:bg-[var(--primary-hover)]"
                   >
-                    Portfolio link
+                    Portfolio Link
                     <svg
                       className="w-4 h-4 text-white"
                       fill="none"
