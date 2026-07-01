@@ -69,6 +69,11 @@ export default function Home() {
               Awards Page 2
             </span>
           </Link>
+          <Link href="/principal-desk">
+            <span className="text-[var(--text-1)] hover:text-[var(--primary)] transition-colors">
+              Principal Desk
+            </span>
+          </Link>
         </div>
         {/* <StudentProjectsList /> */}
         {/* <NasaAwardsSection /> */}
