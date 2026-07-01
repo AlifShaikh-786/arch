@@ -1,149 +1,122 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import HeroSection from "@/src/components/Hero-Section";
+import { gridData } from "@/src/data/awardsData";
 
 export default function NasaAwardsGrid() {
-  // Read More / Show Less State arrays to manage each item independently
-  const [expandedItems, setExpandedItems] = useState<Record<number, boolean>>(
-    {},
+  // Set initial filter state to "nasa" since there is no "all" tab button
+  const [activeFilter, setActiveFilter] = useState<"nasa" | "sports">("nasa");
+
+  // Fixed Filter Logic Execution
+  const filteredData = gridData.filter(
+    (item) => item.categoryType === activeFilter,
   );
-
-  const toggleExpanded = (index: number) => {
-    setExpandedItems((prev) => ({
-      ...prev,
-      [index]: !prev[index],
-    }));
-  };
-
-  // Grid Dataset with 3 template blocks
-  const gridData = [
-    {
-      sectionTitle: "NASA Zonal Victory (2019)",
-      imgSrc: "/campus/campus.png",
-      caption:
-        "Winner of Fashion and Dance Trophy at Zonal NASA Convention 2019",
-      descriptionParagraphs: [
-        `"The National Association of Students of Architecture (NASA India) is one of the largest Architectural Student Organizations in the world with student participants from more than two hundred colleges all over the India and countries around the world. The main objective of NASA India is to create a platform for architecture students to learn and interact, engage them directly and indirectly through both online and offline platforms.`,
-        `NASA India conducts events, conventions, seminars, workshops, design competitions & trophies and many other activities. Millions of students have gone through the NASA India experience in its rich history since the year when it was founded in 1953." Our college became a part of NASA in the year 2013.`,
-      ],
-    },
-    {
-      sectionTitle: "Convention Floor Exhibits",
-      imgSrc: "/campus/campus.png",
-      caption:
-        "Our architecture students presenting their design at the convention floor",
-      descriptionParagraphs: [
-        `During the presentation phase, our design thesis groups showcased pioneering sustainable building workflows that garnered widespread acclaim among standard judging panels. This benchmark platform has expanded horizons for structural exploration across upcoming semesters.`,
-        `By bringing collaborative tools to standard blueprint models, our team continues to build a stellar network among domestic architecture chapters.`,
-      ],
-    },
-    {
-      sectionTitle: "Annual Design Trophies",
-      imgSrc: "/campus/campus.png",
-      caption:
-        "Academic delegation panel viewing modern conceptual thesis entries",
-      descriptionParagraphs: [
-        `Honoring structural complexity and resource optimization, our delegation team successfully secured a top tier shortlisting spot during the annual creative awards cycle. This pushes our continuous design legacy forward across nationwide competition formats.`,
-        `Students combined advanced rendering pipelines with custom structural bamboo methodologies to satisfy rigorous testing paradigms enforced by evaluating architects.`,
-      ],
-    },
-    {
-      sectionTitle: "NASA Zonal Victory (2019)",
-      imgSrc: "/campus/campus.png",
-      caption:
-        "Winner of Fashion and Dance Trophy at Zonal NASA Convention 2019",
-      descriptionParagraphs: [
-        `"The National Association of Students of Architecture (NASA India) is one of the largest Architectural Student Organizations in the world with student participants from more than two hundred colleges all over the India and countries around the world. The main objective of NASA India is to create a platform for architecture students to learn and interact, engage them directly and indirectly through both online and offline platforms.`,
-        `NASA India conducts events, conventions, seminars, workshops, design competitions & trophies and many other activities. Millions of students have gone through the NASA India experience in its rich history since the year when it was founded in 1953." Our college became a part of NASA in the year 2013.`,
-      ],
-    },
-    {
-      sectionTitle: "Convention Floor Exhibits",
-      imgSrc: "/campus/campus.png",
-      caption:
-        "Our architecture students presenting their design at the convention floor",
-      descriptionParagraphs: [
-        `During the presentation phase, our design thesis groups showcased pioneering sustainable building workflows that garnered widespread acclaim among standard judging panels. This benchmark platform has expanded horizons for structural exploration across upcoming semesters.`,
-        `By bringing collaborative tools to standard blueprint models, our team continues to build a stellar network among domestic architecture chapters.`,
-      ],
-    },
-  ];
 
   return (
     <main>
-      {/* Dynamic Grid Hero Banner Display */}
       <div>
         <HeroSection
-          title="Awards Section"
-          description="Committed to academic excellence and strong leadership. Explore our timeline of achievements and architectural milestones."
+          title="Awards & Achievements"
+          description="Committed to academic excellence, athletic leadership, and innovation. Explore our timeline of historic milestones."
         />
       </div>
 
-      <section className="bg-[var(--primary-bg)] py-10 md:py-14 px-4 max-w-7xl mx-auto">
-        {/* Compact Grid Architecture - 3 columns on lg devices */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
-          {gridData.map((item, index) => {
-            const isExpanded = !!expandedItems[index];
+      <section className="bg-[var(--primary-bg)] py-12 md:py-16 px-4 max-w-7xl mx-auto">
+        {/* Dynamic Filter Navigation Bar */}
+        <div className="flex flex-row items-center justify-center gap-3 mb-12 pb-4 ">
+          <button
+            onClick={() => setActiveFilter("nasa")}
+            style={{
+              color: activeFilter === "nasa" ? "white" : "var(--text-1)",
 
+              backgroundColor: activeFilter === "nasa" ? "var(--primary)" : "",
+            }}
+            className={`px-5 py-2  rounded-[var(--r-lg)] btn-md  uppercase  border transition-all cursor-pointer ${
+              activeFilter === "nasa"
+                ? "bg-[var(--primary)] border-[var(--primary)] text-white shadow-sm"
+                : "border-[var(--border-color)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
+            }`}
+          >
+            NASA Awards
+          </button>
+          <button
+            onClick={() => setActiveFilter("sports")}
+            style={{
+              color: activeFilter === "sports" ? "white" : "var(--text-1)",
+
+              backgroundColor:
+                activeFilter === "sports" ? "var(--primary)" : "",
+            }}
+            className={`px-5 py-2  rounded-[var(--r-lg)] btn-md   uppercase  border transition-all cursor-pointer ${
+              activeFilter === "sports"
+                ? "bg-[var(--primary)] border-[var(--primary)] text-white shadow-sm"
+                : "border-[var(--border-color)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
+            }`}
+          >
+            Sports Awards
+          </button>
+        </div>
+
+        {/* 2-Column Grid matching image_a0de3c.jpg structure */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 min-[2400px]:grid-cols-3 gap-x-12 gap-y-10 md:px-5 items-start min-h-[300px]">
+          {filteredData.map((item) => {
             return (
               <div
-                key={index}
-                className="flex flex-col bg-[var(--primary-bg)] border border-[var(--card-border)] rounded-[var(--r-btn)] p-4 shadow-sm justify-between transition-all duration-300 hover:shadow-md"
+                key={item.id}
+                className="flex flex-col sm:flex-row gap-6 items-start pb-8 border-b border-[var(--border-color)] last:border-0 lg:last:border-b"
               >
-                {/* Compact Card Title Header */}
-                <div className="mb-3">
-                  <h4 className="text-[var(--text-1)] ">{item.sectionTitle}</h4>
-                  <div className="w-10 h-0.5 bg-[var(--primary)] mt-1.5 rounded-full"></div>
-                </div>
-
-                {/* Compact Card Top Image Block */}
-                <div className="relative overflow-hidden rounded-[var(--s-btn)] border border-[var(--card-border)] aspect-[16/11] mb-4">
+                {/* Left Side: Thumbnail Block */}
+                <div className="w-full sm:w-[220px] md:w-[240px] flex-shrink-0 relative aspect-[16/10] overflow-hidden bg-[var(--secondary-bg)]">
                   <Image
-                    width={600}
-                    height={400}
+                    width={480}
+                    height={300}
                     src={item.imgSrc}
                     alt={item.sectionTitle}
-                    className="w-full h-full object-cover transform hover:scale-[1.02] transition-transform duration-500"
-                    loading="lazy"
+                    className="w-full h-full object-cover transform hover:scale-[1.02] rounded-[var(--s-btn)] transition-transform duration-500"
                   />
-
-                  {/* Absolute Caption strip layer */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-3 pt-10 text-center">
-                    <span className="small1 text-white  block  ">
-                      {item.caption}
-                    </span>
-                  </div>
                 </div>
 
-                {/* Compact Card Text Paragraph Contexts */}
-                <div className="flex-grow flex flex-col gap-3 text-[var(--text-2)] mb-4">
-                  <div
-                    className={`transition-all duration-300 ${!isExpanded ? "line-clamp-[6]" : ""}`}
-                  >
-                    {item.descriptionParagraphs.map((paragraph, pIdx) => (
-                      <p key={pIdx} className=" mb-2 ">
-                        {paragraph}
-                      </p>
-                    ))}
+                {/* Right Side: Information Block */}
+                <div className="flex-grow flex flex-col justify-start w-full">
+                  {/* Title */}
+                  <h6 className="text-[var(--text-1)] mb-1.5">
+                    {item.sectionTitle}
+                  </h6>
+
+                  {/* Dynamic Clamped Content Block */}
+                  <div className="text-[var(--text-2)] mb-4">
+                    <div className="line-clamp-3">
+                      {item.descriptionParagraphs.map((paragraph, pIdx) => (
+                        <p key={pIdx} className="mb-2 small1">
+                          {paragraph}
+                        </p>
+                      ))}
+                    </div>
                   </div>
 
-                  {/* Individual Read More Trigger button */}
-                  <button
-                    onClick={() => toggleExpanded(index)}
-                    className="self-start text-[var(--primary)] hover:text-[var(--primary-hover)]   transition-colors duration-200 flex items-center gap-1 cursor-pointer mt-0.5"
+                  {/* Action Link Row mimicking 'Read Details' trigger */}
+                  <Link
+                    href={`/awards-section-page/${item.id}`}
+                    className="group inline-flex items-center gap-2 text-[var(--primary)] hover:text-[var(--primary-hover)] transition-colors cursor-pointer self-start"
                   >
-                    <span>{isExpanded ? "Show Less" : "Read More"}</span>
-                    <span
-                      className={`transform transition-transform ${isExpanded ? "rotate-180" : ""}`}
-                    >
-                      &#9662;
-                    </span>
-                  </button>
+                    <span>Read Details</span>
+                    <div className="w-5 h-5 bg-[var(--primary)] group-hover:bg-[var(--primary-hover)] text-white flex items-center justify-center  rounded-[var(--r-lg)] transition-colors transform group-hover:translate-x-0.5">
+                      ➔
+                    </div>
+                  </Link>
                 </div>
               </div>
             );
           })}
+
+          {/* Empty Fallback Display */}
+          {filteredData.length === 0 && (
+            <div className="col-span-full text-center py-12 text-[var(--text-2)]">
+              No award listings cataloged for this section.
+            </div>
+          )}
         </div>
       </section>
     </main>

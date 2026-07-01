@@ -5,7 +5,7 @@ import HeroSection from "@/src/components/Hero-Section";
 
 export default function Page() {
   const menuItems = [
-    { id: "about-programe", label: "About Programe" },
+    { id: "about-program", label: "About Program" },
     { id: "syllabus", label: "Syllabus" },
     { id: "practical-training", label: "Practical Training & Experience" },
     { id: "why-choose", label: "Why Choose" },
@@ -219,7 +219,7 @@ export default function Page() {
         {/* Right Side Sections Content Container */}
         <section className="flex-1 w-full space-y-20 py-16 mt-4">
           {/* 1. M.Arch Programme Section */}
-          <div id="about-programe" className="scroll-mt-8 space-y-8 px-5">
+          <div id="about-program" className="scroll-mt-8 space-y-8 px-5">
             {/* <div className="border-b-2 border-black pb-2 inline-block">
               <h1 className="text-[var(--text-1)] m-0">
                 Master of Architecture (M.Arch) in Pune
@@ -228,7 +228,7 @@ export default function Page() {
 
             {/* Program Introduction */}
             <div className="space-y-6">
-              <h2 className="text-[var(--text-1)] ">About Programe</h2>
+              <h2 className="text-[var(--text-1)] ">About Program</h2>
               <p className="text-[var(--text-2)]">
                 Postgraduate architectural pedagogy centers on advanced research
                 methodologies, systematic analytical skills, and cutting-edge

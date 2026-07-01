@@ -8,6 +8,7 @@ import StudentWork from "../sections/Management/StudentWork";
 import StudentWorkVariation from "../sections/Management/b-Arc";
 import StudentWorkGrid from "../sections/Management/b-Arc";
 import NasaAwardsSection from "../sections/Management/NasaAwardsSection";
+import StudentProjectsList from "../sections/Management/abc";
 
 export default function Home() {
   return (
@@ -39,12 +40,12 @@ export default function Home() {
 
           <Link href="/student-work-page">
             <span className="text-[var(--text-1)] hover:text-[var(--primary)] transition-colors">
-              Table - 1
+              Student Work - 1
             </span>
           </Link>
           <Link href="/table-second">
             <span className="text-[var(--text-1)] hover:text-[var(--primary)] transition-colors">
-              Table - 2
+              Student Work Table - 2
             </span>
           </Link>
           <Link href="/student-work-page-copy">
@@ -63,9 +64,14 @@ export default function Home() {
               Awards Page
             </span>
           </Link>
+          <Link href="/awards-section-page-second">
+            <span className="text-[var(--text-1)] hover:text-[var(--primary)] transition-colors">
+              Awards Page 2
+            </span>
+          </Link>
         </div>
-
-        <NasaAwardsSection />
+        {/* <StudentProjectsList /> */}
+        {/* <NasaAwardsSection /> */}
       </main>
     </>
   );

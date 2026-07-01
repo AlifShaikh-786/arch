@@ -189,6 +189,7 @@
 
 import HeroSection from "@/src/components/Hero-Section";
 import React, { useState } from "react";
+import { GrShare } from "react-icons/gr";
 
 interface Project {
   id: number;
@@ -365,7 +366,7 @@ export default function StudentWorkGrid() {
                       ? "var(--primary)"
                       : "transparent",
                   }}
-                  className={`btn-lg px-8 py-3 transition-all uppercase rounded-[var(--r-lg)] cursor-pointer tracking-wider font-semibold
+                  className={`btn-lg px-8 py-3 transition-all uppercase rounded-[var(--r-lg)] cursor-pointer tracking-wider 
                    `}
                 >
                   {category}
@@ -380,22 +381,22 @@ export default function StudentWorkGrid() {
           <table className="w-full border-collapse text-left">
             <thead>
               <tr className="bg-[var(--primary)] text-white">
-                <th className="p-4 font-semibold tracking-wide w-[7%] border-r border-white/20">
+                <th className="p-4  tracking-wide w-[7%] border-r border-white/20">
                   Sr. No.
                 </th>
-                <th className="p-4 font-semibold tracking-wide w-[33%] border-r border-white/20">
+                <th className="p-4  tracking-wide w-[33%] border-r border-white/20">
                   Project Name
                 </th>
-                <th className="p-4 font-semibold tracking-wide w-[20%] border-r border-white/20">
+                <th className="p-4  tracking-wide w-[20%] border-r border-white/20">
                   Student Name
                 </th>
-                <th className="p-4 font-semibold tracking-wide w-[20%] border-r border-white/20">
+                <th className="p-4  tracking-wide w-[20%] border-r border-white/20">
                   Guide Name
                 </th>
-                <th className="p-4 font-semibold tracking-wide w-[10%] border-r border-white/20 text-center">
+                <th className="p-4  tracking-wide w-[10%] border-r border-white/20 text-center">
                   Resources
                 </th>
-                {/* <th className="p-4 font-semibold tracking-wide w-[10%] text-center">
+                {/* <th className="p-4  tracking-wide w-[10%] text-center">
                   Portfolio
                 </th> */}
               </tr>
@@ -427,15 +428,15 @@ export default function StudentWorkGrid() {
                   </td>
 
                   {/* Column 5: YouTube Resource Button */}
-                  <td className="p-2 border-r border-[var(--card-border)] text-center">
+                  <td className="p-2   border-r border-[var(--card-border)] text-center">
                     <div className="flex flex-col gap-2">
                       <a
                         href={project.youtubeUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn-sm uppercase inline-flex gap-2 items-center justify-center text-center transition-colors no-underline px-3 py-1 rounded-[var(--s-btn)] bg-[var(--secondary-bg)] text-[var(--text-1)] border border-[var(--card-border)] hover:bg-[var(--border-color)]"
+                        className="btn-sm  inline-flex gap-3 items-center justify-center text-center transition-colors no-underline px-2 pr-1  py-1 rounded-[var(--s-btn)] bg-[var(--secondary-bg)] text-[var(--text-1)] border border-[var(--card-border)] hover:bg-[var(--border-color)]"
                       >
-                        Watch Video
+                        Watch Video <GrShare />
                         {/* <svg
                           className="w-3.5 h-3.5 text-[var(--text-1)]"
                           fill="currentColor"
@@ -449,9 +450,9 @@ export default function StudentWorkGrid() {
                         href={project.portfolioUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn-sm inline-flex gap-2 items-center justify-center text-center font-semibold transition-all no-underline px-3 py-1 rounded-[var(--s-btn)] bg-[var(--primary)] text-white hover:bg-[var(--primary-hover)] shadow-sm"
+                        className="btn-sm  inline-flex gap-2 items-center justify-center text-center transition-colors no-underline px-2 py-1 rounded-[var(--s-btn)] bg-[var(--secondary-bg)] text-[var(--text-1)] border border-[var(--card-border)] hover:bg-[var(--border-color)]"
                       >
-                        View Portfolio
+                        View Portfolio <GrShare />
                         {/* <svg
                         className="w-3.5 h-3.5 text-white"
                         fill="none"
@@ -476,7 +477,7 @@ export default function StudentWorkGrid() {
                         href={project.portfolioUrl}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="btn-sm inline-flex gap-2 items-center justify-center text-center font-semibold transition-all no-underline px-3 py-2 rounded-[var(--s-btn)] bg-[var(--primary)] text-white hover:bg-[var(--primary-hover)] shadow-sm"
+                        className="btn-sm inline-flex gap-2 items-center justify-center text-center  transition-all no-underline px-3 py-2 rounded-[var(--s-btn)] bg-[var(--primary)] text-white hover:bg-[var(--primary-hover)] shadow-sm"
                       >
                         View Link
                         <svg

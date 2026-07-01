@@ -107,7 +107,7 @@ export default function StudentWorkGrid() {
         {/* Top Header Section */}
         <div className=" py-16 items-center flex justify-center">
           {/* Dynamic Navigation Filters */}
-          <div className="flex flex-wrap gap-10 bg-[var(--secondary-bg)] shadow-sm rounded-[var(--r-lg)] max-w-md ">
+          <div className="flex flex-wrap gap-10   rounded-[var(--r-lg)] max-w-md ">
             {categories.map((category) => {
               const isActive = activeFilter === category;
               return (
@@ -118,8 +118,11 @@ export default function StudentWorkGrid() {
                     color: isActive ? "white" : "",
                     backgroundColor: isActive ? "var(--primary)" : "",
                   }}
-                  className={`btn-lg px-8   py-3 transition-all uppercase  rounded-[var(--r-lg)]  cursor-pointer
-                    `}
+                  className={`px-7 py-2 rounded-[var(--r-lg)] border border-gray-200 hover:shadow-sm  btn-md cursor-pointer transition-all ${
+                    activeFilter === category
+                      ? "bg-[var(--primary)] text-[var(--primary-bg)] border-[var(--primary)] shadow-sm"
+                      : "bg-[var(--primary-bg)] text-[var(--text-2)] border-[var(--border-color)] hover:bg-[var(--secondary-bg)]"
+                  }`}
                 >
                   {category}
                 </button>

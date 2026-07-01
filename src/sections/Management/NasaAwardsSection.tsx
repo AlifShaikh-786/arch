@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import HeroSection from "@/src/components/Hero-Section";
 
 export default function NasaAwardsSection() {
   // Synchronized Slide Index State
@@ -51,14 +50,6 @@ export default function NasaAwardsSection() {
 
   return (
     <main>
-      {/* Dynamic Hero Section */}
-      {/* <div>
-        <HeroSection
-          title={slidesData[currentSlide].heroTitle}
-          description={slidesData[currentSlide].heroDescription}
-        />
-      </div> */}
-
       <section className="bg-[var(--secondary-bg)] py-12 mt-36 md:py-16 px-10 max-w-7xl mx-auto relative">
         {/* Section Heading */}
         <div className="flex flex-col items-center mb-14">
@@ -72,7 +63,7 @@ export default function NasaAwardsSection() {
           {slidesData.length > 1 && (
             <button
               onClick={prevSlide}
-              className="absolute -left-2 xl:-left-8 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-[var(--text-1)] flex items-center justify-center shadow-lg transition-all btn-md z-20 cursor-pointer border border-[var(--card-border)]"
+              className="absolute -left-2 xl:-left-8 top-1/2 -translate-y-1/2 w-10 h-10 rounded-[var(--r-lg)] bg-white/90 hover:bg-white text-[var(--text-1)] flex items-center justify-center shadow-lg transition-all btn-md z-20 cursor-pointer border border-[var(--card-border)]"
               aria-label="Previous slide"
             >
               &#10094;
@@ -119,7 +110,7 @@ export default function NasaAwardsSection() {
                       <button
                         key={idx}
                         onClick={() => setCurrentSlide(idx)}
-                        className={`h-2 rounded-full transition-all cursor-pointer ${
+                        className={`h-2 rounded-[var(--r-lg)] transition-all cursor-pointer ${
                           currentSlide === idx
                             ? "w-6 bg-[var(--primary)]"
                             : "bg-white/50 w-2"
@@ -139,7 +130,7 @@ export default function NasaAwardsSection() {
                   <h3 className="text-[var(--text-1)]  transition-all duration-300">
                     {slidesData[currentSlide].sectionTitle}
                   </h3>
-                  {/* <div className="w-16 h-1 bg-[var(--primary)] mt-3 rounded-full"></div> */}
+                  {/* <div className="w-16 h-1 bg-[var(--primary)] mt-3 rounded-[var(--r-lg)]"></div> */}
                 </div>
 
                 {/* Clamps text to roughly 10 lines when collapsed */}
@@ -178,7 +169,7 @@ export default function NasaAwardsSection() {
           {slidesData.length > 1 && (
             <button
               onClick={nextSlide}
-              className="absolute -right-10 xl:-right-8 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-[var(--text-1)] flex items-center justify-center shadow-lg transition-all btn-md z-20 cursor-pointer border border-[var(--card-border)]"
+              className="absolute -right-10 xl:-right-8 top-1/2 -translate-y-1/2 w-10 h-10 rounded-[var(--r-lg)] bg-white/90 hover:bg-white text-[var(--text-1)] flex items-center justify-center shadow-lg transition-all btn-md z-20 cursor-pointer border border-[var(--card-border)]"
               aria-label="Next slide"
             >
               &#10095;

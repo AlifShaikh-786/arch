@@ -6,7 +6,7 @@ import HeroSection from "@/src/components/Hero-Section";
 
 export default function page() {
   const menuItems = [
-    { id: "about-programe", label: "About Programe" },
+    { id: "about-program", label: "About Program" },
     { id: "syllabus", label: "Syllabus" },
     { id: "internship", label: "Practical Training & Experience" },
     { id: "why-choose", label: "Why Choose" },
@@ -129,7 +129,7 @@ export default function page() {
         <section className="flex-1 w-full space-y-20 py-16 mt-4">
           {/* 1. B.Arch Programme Section */}
           {/* 1. B.Arch Programme Section */}
-          <div id="about-programe" className="scroll-mt-8 space-y-8 px-5">
+          <div id="about-program" className="scroll-mt-8 space-y-8 px-5">
             {/* <div className="border-b-2 border-black pb-2 inline-block">
               <h2 className="text-[var(--text-1)] m-0">
                 Bachelor of Architecture (B.Arch) in Pune
@@ -139,7 +139,7 @@ export default function page() {
             {/* Program Introduction */}
             <div className="space-y-6">
               <h2 className="text-[var(--text-1)] border-b border-[var(--border-color)] ">
-                About Programe
+                About Program
               </h2>
               <p className="text-[var(--text-2)]">
                 Architectural education is about learning to balance creative
