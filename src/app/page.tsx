@@ -38,7 +38,7 @@ export default function Home() {
             </span>
           </Link>
 
-          <Link href="/student-work-page">
+          {/* <Link href="/student-work-page">
             <span className="text-[var(--text-1)] hover:text-[var(--primary)] transition-colors">
               Student Work - 1
             </span>
@@ -47,28 +47,28 @@ export default function Home() {
             <span className="text-[var(--text-1)] hover:text-[var(--primary)] transition-colors">
               Student Work Table - 2
             </span>
-          </Link>
+          </Link> */}
           <Link href="/student-work-page-copy">
             <span className="text-[var(--text-1)] hover:text-[var(--primary)] transition-colors">
               Student Work
             </span>
           </Link>
 
-          <Link href="/student-work3">
+          {/* <Link href="/student-work3">
             <span className="text-[var(--text-1)] hover:text-[var(--primary)] transition-colors">
               Student Work - 2
             </span>
-          </Link>
+          </Link> */}
           <Link href="/awards-section-page">
             <span className="text-[var(--text-1)] hover:text-[var(--primary)] transition-colors">
               Awards Page
             </span>
           </Link>
-          <Link href="/awards-section-page-second">
+          {/* <Link href="/awards-section-page-second">
             <span className="text-[var(--text-1)] hover:text-[var(--primary)] transition-colors">
               Awards Page 2
             </span>
-          </Link>
+          </Link> */}
           <Link href="/principal-desk">
             <span className="text-[var(--text-1)] hover:text-[var(--primary)] transition-colors">
               Principal Desk

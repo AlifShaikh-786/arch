@@ -23,7 +23,7 @@ export default function ManagementPage() {
             {/* Section Header Title with Custom Underline */}
             <div className="mb-12">
               <h2 className="    text-[var(--text-1)] uppercase   mb-2">
-                MESSAGE FROM Principal Desk
+                MESSAGE FROM Principal
               </h2>
             </div>
 

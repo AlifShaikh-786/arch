@@ -22,7 +22,7 @@ export default async function AwardDetailPage({ params }: PageProps) {
   const nextAwardId = awardId < gridData.length ? awardId + 1 : null;
 
   return (
-    <main className="bg-[var(--primary-bg)] min-h-screen text-[var(--text-1)] pt-12 mt-52 pb-16 px-4 md:px-8">
+    <main className="bg-[var(--primary-bg)] min-h-screen text-[var(--text-1)] pt-12 mt-58 pb-16 px-4 md:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Back Button with Micro-animations */}
         {/* <Link

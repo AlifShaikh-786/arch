@@ -2,10 +2,10 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <footer className="relative w-full bg-[var(--secondary-bg)] overflow-hidden">
+    <footer className="relative w-full bg-[var(--secondary-bg)]  overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto px-5 sm:px-6 md:px-8 lg:px-12 xl:px-16 pt-12 sm:pt-14 lg:pt-16 pb-8">
         {/* Main Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 lg:gap-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-12 lg:gap-28">
           {/* Column 1 - Logo */}
           <div className="flex justify-center sm:justify-start">
             <Link href="/">
@@ -234,5 +234,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );  
+  );
 }

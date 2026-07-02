@@ -21,7 +21,7 @@ export default function HeroSection({ title, description }: data) {
 
       <div className="relative z-10 w-full max-w-5xl text-start px-6 flex flex-col items-start xl:mt-[240px] lg:mt-56 sm:mt-72  mt-64   xl:ml-20 md:ml-16 ml-2 ">
         <h1 className="     drop-shadow-md mb-2">{title}</h1>
-        <div className="w-[180px] h-[2px] bg-white/90 mb-4 opacity-80" />
+        {/* <div className="w-[180px] h-[2px] bg-white/90 mb-4 opacity-80" /> */}
 
         {/* Subtitle Description */}
         <p className="text-white   md:max-w-md lg:max-w-xl max-w-sm    drop-shadow-sm">

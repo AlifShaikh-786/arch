@@ -23,9 +23,9 @@ export default function NasaAwardsGrid() {
         />
       </div>
 
-      <section className="bg-[var(--primary-bg)] py-12 md:py-16 px-4 max-w-7xl mx-auto">
+      <section className="bg-[var(--primary-bg)] py-20 px-6 max-w-7xl mx-auto">
         {/* Dynamic Filter Navigation Bar */}
-        <div className="flex flex-row items-center justify-center gap-3 mb-12 pb-4 ">
+        <div className="flex flex-row items-center justify-center gap-3 pb-16 ">
           <button
             onClick={() => setActiveFilter("nasa")}
             style={{
@@ -33,7 +33,7 @@ export default function NasaAwardsGrid() {
 
               backgroundColor: activeFilter === "nasa" ? "var(--primary)" : "",
             }}
-            className={`px-5 py-2  rounded-[var(--r-lg)] btn-md  uppercase  border transition-all cursor-pointer ${
+            className={`px-5 py-2  rounded-[var(--r-lg)] btn-md  uppercase  border border-[var(--border-color2)] transition-all cursor-pointer ${
               activeFilter === "nasa"
                 ? "bg-[var(--primary)] border-[var(--primary)] text-white shadow-sm"
                 : "border-[var(--border-color)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
@@ -49,7 +49,7 @@ export default function NasaAwardsGrid() {
               backgroundColor:
                 activeFilter === "sports" ? "var(--primary)" : "",
             }}
-            className={`px-5 py-2  rounded-[var(--r-lg)] btn-md   uppercase  border transition-all cursor-pointer ${
+            className={`px-5 py-2  rounded-[var(--r-lg)] btn-md   uppercase  border border-[var(--border-color2)] transition-all cursor-pointer ${
               activeFilter === "sports"
                 ? "bg-[var(--primary)] border-[var(--primary)] text-white shadow-sm"
                 : "border-[var(--border-color)] text-[var(--text-2)] hover:bg-[var(--secondary-bg)]"
@@ -60,21 +60,21 @@ export default function NasaAwardsGrid() {
         </div>
 
         {/* 2-Column Grid matching image_a0de3c.jpg structure */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 min-[2400px]:grid-cols-3 gap-x-12 gap-y-10 md:px-5 items-start min-h-[300px]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 min-[2400px]:grid-cols-3 gap-x-12 gap-y-10  items-start min-h-[400px]">
           {filteredData.map((item) => {
             return (
               <div
                 key={item.id}
-                className="flex flex-col sm:flex-row gap-6 items-start pb-8 border-b border-[var(--border-color)] last:border-0 lg:last:border-b"
+                className="flex flex-col sm:flex-row gap-6 items-start  "
               >
                 {/* Left Side: Thumbnail Block */}
-                <div className="w-full sm:w-[220px] md:w-[240px] flex-shrink-0 relative aspect-[16/10] overflow-hidden bg-[var(--secondary-bg)]">
+                <div className="w-full sm:w-[220px] md:w-[240px] lg:h-[170px]  flex-shrink-0 relative aspect-[16/10] overflow-hidden bg-[var(--secondary-bg)]">
                   <Image
                     width={480}
-                    height={300}
+                    height={450}
                     src={item.imgSrc}
                     alt={item.sectionTitle}
-                    className="w-full h-full object-cover transform hover:scale-[1.02] rounded-[var(--s-btn)] transition-transform duration-500"
+                    className="w-full h-full object-cover transform   transition-transform duration-500"
                   />
                 </div>
 
@@ -110,13 +110,6 @@ export default function NasaAwardsGrid() {
               </div>
             );
           })}
-
-          {/* Empty Fallback Display */}
-          {filteredData.length === 0 && (
-            <div className="col-span-full text-center py-12 text-[var(--text-2)]">
-              No award listings cataloged for this section.
-            </div>
-          )}
         </div>
       </section>
     </main>
