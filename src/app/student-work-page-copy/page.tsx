@@ -628,7 +628,7 @@ export default function StudentWorkGrid() {
                     key={project.id}
                     className="flex flex-col bg-white border border-(--border-color2) rounded-[var(--r-btn)] shadow-sm overflow-hidden"
                   >
-                    {/* Visual Header / Thumbnail Box */}
+                   
                     <div className="relative aspect-[2/1] w-full  pb-4 flex-shrink-0">
                       <div className="relative w-full h-full rounded-[var(--r-btn)] overflow-hidden">
                         <Image
